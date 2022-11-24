@@ -1,0 +1,195 @@
+@media only screen and (min-width: 1501px) {
+	
+}
+
+/* XL Device :1200px. 1170px */
+@media (min-width: 1200px) and (max-width: 1500px) {
+	
+}
+
+/* Medium Layout: 1000px.  */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.nav ul li a {
+		padding: 20px 10px 10px 10px;
+	}
+}
+
+/* Tablet Layout: 768px.  750px*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.logo {
+		margin: 0 0;
+	}
+	.logo a img {
+		height: 50px;
+	}
+	.nav ul {
+		padding: 18px 0 0 0;
+		display: block;
+	}
+	.nav ul li a {
+		padding: 20px 4px 10px 4px;
+		font-size: 14px;
+	}
+	
+	.login-form {
+		padding: 20px 20px 0 20px;
+	}
+	
+	.footer p {
+		font-size: 12px;
+	}
+	.footer-explore ul li a {
+		font-size: 12px;
+	}
+	.footer-contact ul li {
+		font-size: 12px;
+	}
+	.contact-links i {
+		padding: 15px;
+		margin-right: 2px;
+	}
+	.bottom-link {
+		margin: 30px -20px 0 -20px;
+	}
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+	p {
+		font-size: 12px;
+	}
+	.btn-box {
+		padding: 8px 14px;
+		font-size: 14px;
+	}
+	.common-header h2 {
+		font-size: 20px;
+	}
+
+	.header-area button {
+		display: inline;
+		position: fixed;
+		top: 12px;
+		left: 12px;
+		color: white;
+		background-color: #33354F;
+		border: 0;
+		padding: 5px 10px;
+		border-radius: 4px;
+	}
+	.logo {
+		float: right;
+		text-align: right;
+		margin: 0 0;
+		width: 200px;
+	}
+	.logo a img {
+		height: 45px;
+	}
+	.nav {
+		float: left;
+		width: 112%;
+		margin: 0 -15px;
+		background-color: #000;
+	}
+	.nav ul {
+		width: 100%;
+		padding: 0 0 0 0;
+		margin-bottom: 0px;
+		display: none;
+	}
+	.nav ul li {
+		display: block;
+		text-align: center;
+		padding: 6px 0;
+	}
+	.nav ul li a {
+		padding: 6px 0;
+		font-size: 12px;
+		display: block;
+		margin: -6px 0;
+		color: white;
+	}
+	.nav ul li a:hover {
+		color: white;
+		background-color: blue;
+	}
+	.active-menu {
+		color: white !important;
+		background-color: blue !important;
+	}
+	
+	.banner h1 {
+		font-size: 28px;
+	}
+	
+	.blogs {
+		padding: 50px 10px;
+	}
+	.about {
+		padding: 50px 10px;
+	}
+	
+	.register {
+		padding: 50px 15px;
+	}
+	.login-form {
+		padding: 10px 10px 0 10px;
+	}
+	.register-form input,
+	.register-form textarea {
+		font-size: 12px;
+	}
+	.register-form input::placeholder,
+	.register-form textarea::placeholder {
+		font-size: 12px;
+	}
+	.register-form .text-right {
+		text-align: left !important;
+	}
+	
+	.footer p {
+		font-size: 12px;
+	}
+	.footer-explore ul li a {
+		font-size: 12px;
+		color: white;
+	}
+	.footer-contact ul li {
+		font-size: 12px;
+	}
+	.contact-links i {
+		padding: 10px;
+		margin-right: 2px;
+	}
+	.active-menu {
+		color: white !important;
+		background-color: blue !important;
+	}
+	
+	.header-area {
+		position: fixed;
+		z-index: 9999;
+	}
+	.hero-header-area {
+		padding-top: 70px;
+	}
+	
+	.article {
+		padding: 50px 15px;
+	}
+	
+	.bottom-link {
+		margin: 30px -10px 0 -10px;
+	}
+}
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.banner-area {
+		background-size: cover;
+	}
+	.footer-up {
+		min-height: 580px;
+	}
+}
