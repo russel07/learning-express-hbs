@@ -1,0 +1,52 @@
+	<!-- ARTICLE SECTION START -->
+		<section class="article-area">
+			<div class="article container">
+				<div class="row">
+				    <div class="col-md-12">
+                        <div class="text-center mb-2">
+                            <h1 class="title">Add new article</h1>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12" offset="4">
+                        <form action="/add_article" method="POST" class="was-validated" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label class="form-label">Title</label>
+                                    <input type="text" class="form-control" id="article_title" value="" name="title" placeholder="Article Title" required>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <label class="form-label">Description</label>
+                                    <textarea class="form-control" row="5" id="article_description" value="" name="description" placeholder="Article Description" required></textarea>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <label class="form-label">Post Thumbnail</label>
+                                    <input type="file" class="form-control" id="thumbnail" value="" name="thumbnail" placeholder="Post Thumbnail" required>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <label class="form-label">Author Name</label>
+                                    <input type="text" class="form-control" id="author" value="" name="author" placeholder="Author Name" required>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <label class="form-label">Author BIO</label>
+                                    <textarea class="form-control" row="5" id="author_bio" value="" name="author_bio" placeholder="Author Bio" required></textarea>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <label class="form-label">Author Image</label>
+                                    <input type="file" class="form-control" id="author_image" value="" name="author_image" placeholder="Author Thumbnail" required>
+                                </div>
+
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-block btn-lg btn-primary">Add Article</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div
+				</div>
+			</div>
+		</section>

@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>{{title}}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/all.min.css">
+		<link rel="shortcut icon" href="/img/favicon.png"/>
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/responsive.css"/>
+	</head>
+	<body>
+		<button class="wow animated fadeInDown" data-wow-delay="0.3sec" onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
+		
+        <!-- HEADER1 SECTION START -->
+		<div class="header-area">
+			<div class="container">
+				<div class="header">
+					<div class="row">
+						<div class="col-md-2 float-left">
+							<div class="logo">
+								<a href="#">
+									<img src="/img/logo.svg" alt="App Logo" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-10 float-right">
+							<button id="collapse-nav-menu"><i class="fas fa-bars"></i></button>
+							<div class="nav d-flex justify-content-center" id="nav">
+								<ul id="nav-menu">
+									<li class="scroll"><a class="active-menu" href="/">Home</a></li>
+									<li class="scroll"><a href="/blog">Blog</a></li>
+									<li class="scroll"><a href="#">about us</a></li>
+									{{#if user}}
+									<li class="scroll"><a href="/logout">Logout {{user.first_name}}</a></li>
+									{{else}}
+									    <li class="scroll"><a href="/login">Login</a></li>
+                                    	<li class="scroll"><a href="/register">Sign Up</a></li>
+									{{/if}}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        {{#if show_hero}}
+        <!-- HEADER2 SECTION START -->
+		<div class="hero-header-area">
+			<div class="container">
+				<div class="hero-header">
+					<div class="row">
+						<div class="col-md-9 float-left"></div>
+						<div class="col-md-3 float-left">
+							<form class="hero-search">
+								<div class="">
+									<input type="text" class="form-control" id="" name="" placeholder="Search the blog">
+								</div>
+								<button><i class="fas fa-search"></i></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        {{/if}}
+
+        {{{body}}}
+
+        <!-- FOOTER SECTION START -->
+		<footer class="footer-area">
+			<div class="container">
+				<div class="footer">
+					<div class="footer-up pt-5 pb-5">
+						<div class="row">
+							<div class="col-md-4 float-left">
+								<div class="footer-logo">
+									<img src="/img/logo.svg" alt="App Logo" />
+									<p>Welcome to our web developing agency. Lorem ipsum simply free text dolor sited amet cons cing elit.</p>
+									<div class="contact-links">
+										<a href="#"><i class="fab fa-facebook"></i></a>
+										<a href=""><i class="fab fa-linkedin-in"></i></a>
+										<a href="#"><i class="fab fa-twitter"></i></a>
+										<a href="mailto:"><i class="fas fa-envelope"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 float-left">
+								<div class="footer-explore">
+									<h4>Explore</h4>
+									<ul>
+										<li><a href="#">Home</a></li>
+										<li><a href="#">About Us</a></li>
+										<li><a href="#">Sign Up</a></li>
+										<li><a href="#">Sign In</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-4 float-left">
+								<div class="footer-contact">
+									<h4>contact</h4>
+									<ul>
+										<li><a href="#"><i class="fas fa-map-marker-alt"></i></a>Sylhet 3100, Bangladesh</li>
+										<li><a href="tel:+8801916458245"><i class="fas fa-phone"></i></a>+8801916458245</li>
+										<li><a href="mailto:md.russel.hussain@gmail.com"><i class="fas fa-envelope"></i></a>md.russel.hussain@gmail.com</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom text-center">
+						<p>&copy; copyright 2022</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+<!-- JAVASCRIPT PLUGIN -->
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		
+		
+		<script>
+			mybutton = document.getElementById("myBtn");
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			  } else {
+				mybutton.style.display = "none";
+			  }
+			}
+
+			function topFunction() {
+				window.scroll({
+				  top: 0,
+				  left: 0,
+				  behavior: 'smooth'
+				});
+			}
+		</script>
+		
+		<script>
+			//nav menu
+			$(document).ready(function(){
+			  $("#collapse-nav-menu").click(function(){
+				$("#nav ul").toggle(500);
+			  });
+			});
+		</script>
+	</body>
+</html>

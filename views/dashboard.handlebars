@@ -1,0 +1,42 @@
+	<!-- ARTICLE SECTION START -->
+		<section class="article-area">
+			<div class="article container">
+				<div class="row">
+				    <div class="col-md-12">
+                        <div class="text-right mb-2">
+                            <a href="/add-article-form" class="btn btn-primary">Add Article</a>
+                        </div>
+
+                        <div class="article-list">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Article Title</th>
+                                        <th>Article Description</th>
+                                        <th>Article Image</th>
+                                        <th>Author</th>
+                                        <th>Author Bio</th>
+                                        <th>Author Image</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each data}}
+                                    <tr>
+                                        <td>{{this.title}}</td>
+                                        <td>{{shortDesc}}</td>
+                                        <td><img src="/{{this.thumbnail}}" alt="" width="100"></td>
+                                        <td>{{this.author}}</td>
+                                        <td>{{shortBio}}</td>
+                                        <td><img src="/{{this.author_image}}" alt="" width="100"</td>
+                                        <td>
+                                            <a href="/delete-article/{{this._id}}" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                    </div>
+				</div>
+			</div>
+		</section>

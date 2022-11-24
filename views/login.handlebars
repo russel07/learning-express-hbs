@@ -1,0 +1,50 @@
+
+<!-- SIGN IN SECTION START -->
+		<div class="register-area">
+			<div class="register container">
+				<div class="row">
+					<div class="col-md-2 col-lg-4 float-left"></div>
+					<div class="col-md-8 col-lg-4 float-left">
+						<div class="login-form register-form">
+							<div class="text-center">
+								<img src="/img/logo_mini.svg" alt="" />
+								<h4>Sign in to WHC</h4>
+							</div>
+
+							{{#if data.valid }}
+							<div class="alert alert-success" role="alert">
+								Credentials is valid
+							</div>
+							{{/if}}
+							<form action="/login" method="POST" {{#if data.hasError }}class="was-validated"{{/if}}>
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<input type="email" class="form-control" id="email" value="{{{data.email.value}}}" name="email" placeholder="Email Address" required>
+										{{#if data.email.has_error }}
+										<div class="invalid-feedback">{{data.email.message}}</div>
+										{{/if}}
+									</div>
+									<div class="col-md-12 form-group">
+										<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+										{{#if data.password.has_error }}
+										<div class="invalid-feedback">{{data.password.message}}</div>
+										{{/if}}
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#">Forgot Password?</a>
+									</div>
+								</div>
+								<button class="btn btn-block btn-lg btn-primary">Log In</button>
+							</form>
+							
+							<div class="bottom-link">
+								<p>New to WHC? <a href="/register">Sign Up</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-lg-4 float-left"></div>
+				</div>
+			</div>
+		</section>

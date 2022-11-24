@@ -1,0 +1,37 @@
+        <!-- BANNER SECTION START -->
+		<section class="banner-area">
+			<div class="banner container">
+				<div class="row">
+					<div class="col-md-12 float-left">
+						<h1>Web Hosting Canada’s Blog</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- BLOGS SECTION START -->
+		<section class="blogs-area">
+			<div class="blogs container">
+				<div class="row">
+					<div class="col-md-12 float-left">
+						<div class="common-header">
+							<h2>Latest Blog Post</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-5">
+				    {{#each data}}
+					<div class="col-md-4 float-left">
+						<div class="single-blog">
+							<div class="single-blog-img">
+								<img src="{{this.thumbnail}}" alt="" />
+							</div>
+							<h4>{{this.title}}</h4>
+							<p>{{shortDesc}}</p>
+							<a href="article/{{this._id}}" class="btn btn-primary">Read More</a>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</section>
